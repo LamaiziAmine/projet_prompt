@@ -1,8 +1,7 @@
---------------------------------
-|     exercice 3.3             |
---------------------------------
+## 🧩 Exercice 3.3 
 
-## Question 1
+
+### ❓ Question 1
 
 **prompt**
 "générer un docstring complet et conforme à un standard pour la fonction get_user_permissions. Le docstring doit décrire : le but de la fonction, ses arguments (user_id, system_context), sa valeur de retour, et un exemple d'utilisation."
@@ -45,7 +44,7 @@ def get_user_permissions(user_id, system_context):
         return ['read']
 ```
 
-## Question 2
+### 🎯 Question 2 
 
 **prompt**
 " générer une section Markdown pour le fichier README.md du projet, expliquant comment utiliser cette fonction, ses prérequis (le format de system_context), et des exemples d'appel."
@@ -82,7 +81,7 @@ print(get_user_permissions('editor2', system_context))  # ➝ ['read', 'write']
 print(get_user_permissions('user42', system_context))   # ➝ ['read']
 ```
 
-## Question 3
+## 📌 Question 3
 
 Oui, le docstring et la section README générés sont clairs, complets et faciles à comprendre pour un autre développeur. Voici quelques points qui rendent leur documentation efficace :
 
