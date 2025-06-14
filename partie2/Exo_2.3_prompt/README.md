@@ -1,40 +1,58 @@
-------------------------------------------------------------
-|                       exercice 2.3                        |
-------------------------------------------------------------
+## 📌 Exercice 2.3 – Analyse d'Expériences de Prompt Engineering
 
-
-# Analyse d'Expériences de Prompt Engineering
-
-Ce document présente l’analyse de trois expériences de prompt engineering réalisées à l’aide d’un modèle de langage (IA) pour générer une fonction en Python. Chaque partie décrit le prompt employé, le code produit, ainsi qu’une analyse critique de la réponse générée.
+Ce document présente l’analyse de trois expériences de prompt engineering réalisées à l’aide d’un modèle de langage (IA) pour générer une fonction en Python.  
+Chaque partie décrit :
+- Le **prompt utilisé**
+- Le **code généré**
+- Une **analyse critique** du résultat obtenu
 
 ---
 
-## Prompt Vague :
+### 🌀 Prompt Vague
 
-### Le Prompt
+#### 📝 Le prompt
+
 ```
 "Écris une fonction pour faire des opérations entre deux nombres en Python."
 ```
-### répense AI
-HTML/CSS/JS
---> dans le fichier **calcule1.html** 
 
-### résultat observé 
-- le style est trés simple 
-- pas de gestion de erreurs (a/0 donne infinity)
+#### 💻 Réponse de l'IA
+> Génération d'une **interface HTML/CSS/JS**  
+> 📄 Fichier généré : `calcule1.html`
+
+#### 🔍 Résultat observé
+- Design **très simple** et basique
+- **Aucune gestion des erreurs** (exemple : `a / 0` renvoie `Infinity`)
+- Utilisation directe de `eval()` sans vérification
 
 ---
-## Prompt spécialisé :
 
-écrire un mini-application web en html css js qui simule une calculatrice simple pour un étudiant ingénieur en génie informatique avec un style élégant et la gestion des erreurs.
+### 🎯 Prompt Spécialisé
 
-### répense AI
-HTML/CSS/JS
---> dans le fichier **calcule2.html**
+#### 📝 Le prompt
+> *"Écrire une mini-application web en HTML/CSS/JS qui simule une calculatrice simple pour un étudiant ingénieur en génie informatique, avec un style élégant et la gestion des erreurs."*
 
+#### 💻 Réponse de l'IA
+> Génération d'une interface **plus aboutie**  
+> 📄 Fichier généré : `calcule2.html`
 
-## la différence entre les deux versions
+---
 
- La première, **calcule1.html**, adopte une interface claire, simple et épurée, avec un design minimaliste et des boutons standards. Elle convient bien à un usage de base ou à des projets d'apprentissage. En revanche, **calcule2.html** propose une version plus avancée, au style sombre et moderne, avec des boutons colorés, arrondis et réactifs, offrant une meilleure ergonomie et une expérience utilisateur plus professionnelle.
+### ⚖️ Comparaison des deux versions
 
-Sur le plan fonctionnel, la différence majeure réside dans la gestion des erreurs. Alors que    **calcule1.html** utilise *eval()* de manière directe sans aucune vérification, **calcule2.html** introduit une sécurité minimale en détectant explicitement les cas de division par zéro, ce qui renforce légèrement sa robustesse. Toutefois, les deux versions restent vulnérables car elles reposent toutes deux sur *eval()*, une méthode risquée si elle n’est pas strictement contrôlée. En résumé, **calcule1.html** est plus adaptée pour des usages simples ou éducatifs, tandis que **calcule2.html** cible un usage plus avancé, avec une meilleure esthétique et une gestion des erreurs un peu plus rigoureuse.
+| Élément              | `calcule1.html`                             | `calcule2.html`                                  |
+|----------------------|---------------------------------------------|--------------------------------------------------|
+| 💡 Interface         | Simple, épurée, boutons standards           | Moderne, sombre, boutons arrondis et interactifs |
+| 🎨 Esthétique        | Basique, adaptée à l’apprentissage          | Plus professionnelle, meilleure UX              |
+| 🛡️ Sécurité          | Aucune vérification, `eval()` brut          | Détection des divisions par zéro                |
+| ⚠️ Vulnérabilité     | Risque élevé via `eval()`                   | Toujours vulnérable, mais légèrement renforcée   |
+| 🎯 Cible             | Usage éducatif ou expérimental              | Usage semi-professionnel, étudiant ingénieur     |
+
+---
+
+### 🧠 Conclusion
+
+- `calcule1.html` est une version minimaliste, utile pour l’apprentissage ou les démonstrations simples.  
+- `calcule2.html` propose une **expérience utilisateur enrichie**, avec un style plus abouti et une gestion rudimentaire des erreurs.
+- **Les deux versions** utilisent `eval()` — ce qui reste une méthode **risquée** sans validation stricte.  
+Il est donc essentiel de **renforcer la sécurité** dans un usage réel.
